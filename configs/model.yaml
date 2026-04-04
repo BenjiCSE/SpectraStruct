@@ -1,0 +1,11 @@
+embedding_dim: 128
+encoder_channels: [32, 64, 128]
+encoder_kernel_sizes: [7, 5, 3]
+encoder_dropout: 0.1
+
+fusion_output_dim: 256
+fusion_hidden_dim: 512
+fusion_n_layers: 2
+fusion_dropout: 0.1
+
+n_functional_groups: 20
