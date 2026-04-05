@@ -14,3 +14,5 @@ data/raw/*.sd
 data/raw/*.sql*
 *.log
 .DS_Store
+frontend/node_modules/
+frontend/dist/
