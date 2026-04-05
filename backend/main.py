@@ -99,6 +99,82 @@ def predict(req: PredictRequest):
     # Live mode: MIST inference (placeholder — wire in after hackathon setup)
     raise HTTPException(501, "Live inference not yet configured. Set DEMO_MODE=true.")
 
+def _parse_peaks(text: str) -> List[tuple]:
+    import csv as _csv
+    peaks = []
+    for row in _csv.reader(io.StringIO(text)):
+        if len(row) >= 2:
+            try:
+                peaks.append((float(row[0]), float(row[1])))
+            except ValueError:
+                pass
+    return peaks
+
+
+def _bin(peaks: List[tuple], lo: float, hi: float, n: int):
+    import numpy as np
+    v = np.zeros(n, dtype=np.float64)
+    for x, y in peaks:
+        if lo <= x < hi:
+            v[min(int((x - lo) / (hi - lo) * n), n - 1)] = max(v[min(int((x - lo) / (hi - lo) * n), n - 1)], y)
+    mx = v.max()
+    if mx > 0:
+        v /= mx
+    return v
+
+
+def _cos(a, b) -> float:
+    import numpy as np
+    d = float(np.dot(a, b))
+    na, nb = float(np.linalg.norm(a)), float(np.linalg.norm(b))
+    return d / (na * nb) if na > 0 and nb > 0 else 0.0
+
+
 def _guess_molecule(req: PredictRequest) -> str:
-    """Try to guess molecule from filename hints in CSV data (best effort)."""
-    return "caffeine"  # default fallback
+    """Match uploaded spectra against fixture library by cosine similarity."""
+    import csv as _csv
+
+    nmr_text = ms_text = None
+    if req.nmr_csv:
+        try: nmr_text = base64.b64decode(req.nmr_csv).decode("utf-8")
+        except Exception: pass
+    if req.ms_csv:
+        try: ms_text = base64.b64decode(req.ms_csv).decode("utf-8")
+        except Exception: pass
+
+    q_nmr = _bin(_parse_peaks(nmr_text), -2.0, 14.0, 1024) if nmr_text else None
+    q_ms = _bin(_parse_peaks(ms_text), 0.0, 2000.0, 2048) if ms_text else None
+
+    if q_nmr is None and q_ms is None:
+        return "caffeine"
+
+    best_name, best_score = "caffeine", -1.0
+
+    for fp in FIXTURES_DIR.glob("*.json"):
+        name = fp.stem
+        sim, n = 0.0, 0
+
+        if q_nmr is not None:
+            ref_path = SPECTRA_DIR / f"{name}_nmr.csv"
+            if ref_path.exists():
+                with open(ref_path) as fh:
+                    ref = [(float(r[0]), float(r[1])) for r in _csv.reader(fh) if len(r) >= 2 and r[0].replace('.','',1).replace('-','',1).isdigit()]
+                if ref:
+                    sim += _cos(q_nmr, _bin(ref, -2.0, 14.0, 1024))
+                    n += 1
+
+        if q_ms is not None:
+            ref_path = SPECTRA_DIR / f"{name}_ms.csv"
+            if ref_path.exists():
+                with open(ref_path) as fh:
+                    ref = [(float(r[0]), float(r[1])) for r in _csv.reader(fh) if len(r) >= 2 and r[0].replace('.','',1).replace('-','',1).isdigit()]
+                if ref:
+                    sim += _cos(q_ms, _bin(ref, 0.0, 2000.0, 2048))
+                    n += 1
+
+        if n > 0 and sim / n > best_score:
+            best_score = sim / n
+            best_name = name
+
+    logger.info("Guessed molecule: %s (similarity=%.4f)", best_name, best_score)
+    return best_name
