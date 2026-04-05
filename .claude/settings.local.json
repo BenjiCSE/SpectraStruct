@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 scripts/fetch_demo_data.py)",
+      "Bash(python3 scripts/build_fixtures.py)",
+      "Bash(pip3 install:*)",
+      "WebSearch",
+      "Bash(git clone:*)",
+      "Bash(git ls-remote:*)",
+      "Bash(python3 -c \":*)"
+    ]
+  }
+}

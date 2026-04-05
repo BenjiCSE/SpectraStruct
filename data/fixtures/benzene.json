@@ -1,0 +1,272 @@
+{
+  "id": "benzene",
+  "display_name": "Benzene",
+  "smiles": "c1ccccc1",
+  "formula": "C6H6",
+  "mw": 78.11,
+  "has_nmr": true,
+  "has_ms": true,
+  "nmr_csv_path": "data/fixtures/spectra/benzene_nmr.csv",
+  "ms_csv_path": "data/fixtures/spectra/benzene_ms.csv",
+  "candidates": [
+    {
+      "smiles": "c1ccccc1",
+      "score": 0.94,
+      "rank": 1,
+      "valid": true,
+      "conformer_sdf": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    0.8038   -1.1399    0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3891    0.1261   -0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5854    1.2659   -0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8038    1.1399   -0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3891   -0.1261    0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5854   -1.2659    0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4300   -2.0279    0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4714    0.2243   -0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0414    2.2523   -0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4300    2.0279   -0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4714   -0.2243    0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0414   -2.2523    0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  6  1  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n$$$$\n"
+    },
+    {
+      "smiles": "Cc1ccccc1",
+      "score": 0.85,
+      "rank": 2,
+      "valid": true,
+      "conformer_sdf": null
+    },
+    {
+      "smiles": "c1ccc(F)cc1",
+      "score": 0.76,
+      "rank": 3,
+      "valid": true,
+      "conformer_sdf": null
+    },
+    {
+      "smiles": "c1cccnc1",
+      "score": 0.67,
+      "rank": 4,
+      "valid": true,
+      "conformer_sdf": null
+    },
+    {
+      "smiles": "c1ccoc1",
+      "score": 0.58,
+      "rank": 5,
+      "valid": true,
+      "conformer_sdf": null
+    }
+  ],
+  "variants": {
+    "nmr": [
+      {
+        "smiles": "c1ccc(F)cc1",
+        "score": 0.61,
+        "rank": 1,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "Cc1ccccc1",
+        "score": 0.57,
+        "rank": 2,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccccc1",
+        "score": 0.54,
+        "rank": 3,
+        "valid": true,
+        "conformer_sdf": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    0.8038   -1.1399    0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3891    0.1261   -0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5854    1.2659   -0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8038    1.1399   -0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3891   -0.1261    0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5854   -1.2659    0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4300   -2.0279    0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4714    0.2243   -0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0414    2.2523   -0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4300    2.0279   -0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4714   -0.2243    0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0414   -2.2523    0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  6  1  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n$$$$\n"
+      },
+      {
+        "smiles": "c1cccnc1",
+        "score": 0.4,
+        "rank": 4,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccoc1",
+        "score": 0.33,
+        "rank": 5,
+        "valid": true,
+        "conformer_sdf": null
+      }
+    ],
+    "ms": [
+      {
+        "smiles": "Cc1ccccc1",
+        "score": 0.72,
+        "rank": 1,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccccc1",
+        "score": 0.68,
+        "rank": 2,
+        "valid": true,
+        "conformer_sdf": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    0.8038   -1.1399    0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3891    0.1261   -0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5854    1.2659   -0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8038    1.1399   -0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3891   -0.1261    0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5854   -1.2659    0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4300   -2.0279    0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4714    0.2243   -0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0414    2.2523   -0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4300    2.0279   -0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4714   -0.2243    0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0414   -2.2523    0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  6  1  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n$$$$\n"
+      },
+      {
+        "smiles": "c1ccc(F)cc1",
+        "score": 0.6,
+        "rank": 3,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1cccnc1",
+        "score": 0.54,
+        "rank": 4,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccoc1",
+        "score": 0.48,
+        "rank": 5,
+        "valid": true,
+        "conformer_sdf": null
+      }
+    ],
+    "ms_nmr": [
+      {
+        "smiles": "c1ccccc1",
+        "score": 0.87,
+        "rank": 1,
+        "valid": true,
+        "conformer_sdf": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    0.8038   -1.1399    0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3891    0.1261   -0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5854    1.2659   -0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8038    1.1399   -0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3891   -0.1261    0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5854   -1.2659    0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4300   -2.0279    0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4714    0.2243   -0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0414    2.2523   -0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4300    2.0279   -0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4714   -0.2243    0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0414   -2.2523    0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  6  1  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n$$$$\n"
+      },
+      {
+        "smiles": "Cc1ccccc1",
+        "score": 0.79,
+        "rank": 2,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccc(F)cc1",
+        "score": 0.71,
+        "rank": 3,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1cccnc1",
+        "score": 0.63,
+        "rank": 4,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccoc1",
+        "score": 0.55,
+        "rank": 5,
+        "valid": true,
+        "conformer_sdf": null
+      }
+    ],
+    "nmr_ms": [
+      {
+        "smiles": "c1ccccc1",
+        "score": 0.87,
+        "rank": 1,
+        "valid": true,
+        "conformer_sdf": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    0.8038   -1.1399    0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3891    0.1261   -0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5854    1.2659   -0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8038    1.1399   -0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3891   -0.1261    0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5854   -1.2659    0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4300   -2.0279    0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4714    0.2243   -0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0414    2.2523   -0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4300    2.0279   -0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4714   -0.2243    0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0414   -2.2523    0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  6  1  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n$$$$\n"
+      },
+      {
+        "smiles": "Cc1ccccc1",
+        "score": 0.79,
+        "rank": 2,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccc(F)cc1",
+        "score": 0.71,
+        "rank": 3,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1cccnc1",
+        "score": 0.63,
+        "rank": 4,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccoc1",
+        "score": 0.55,
+        "rank": 5,
+        "valid": true,
+        "conformer_sdf": null
+      }
+    ],
+    "ir_ms_nmr": [
+      {
+        "smiles": "c1ccccc1",
+        "score": 0.94,
+        "rank": 1,
+        "valid": true,
+        "conformer_sdf": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    0.8038   -1.1399    0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3891    0.1261   -0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5854    1.2659   -0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8038    1.1399   -0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3891   -0.1261    0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5854   -1.2659    0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4300   -2.0279    0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4714    0.2243   -0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0414    2.2523   -0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4300    2.0279   -0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4714   -0.2243    0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0414   -2.2523    0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  6  1  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n$$$$\n"
+      },
+      {
+        "smiles": "Cc1ccccc1",
+        "score": 0.85,
+        "rank": 2,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccc(F)cc1",
+        "score": 0.76,
+        "rank": 3,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1cccnc1",
+        "score": 0.67,
+        "rank": 4,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccoc1",
+        "score": 0.58,
+        "rank": 5,
+        "valid": true,
+        "conformer_sdf": null
+      }
+    ],
+    "ms_nmr_ir": [
+      {
+        "smiles": "c1ccccc1",
+        "score": 0.94,
+        "rank": 1,
+        "valid": true,
+        "conformer_sdf": "\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    0.8038   -1.1399    0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3891    0.1261   -0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5854    1.2659   -0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8038    1.1399   -0.0149 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3891   -0.1261    0.0021 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5854   -1.2659    0.0170 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4300   -2.0279    0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4714    0.2243   -0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0414    2.2523   -0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4300    2.0279   -0.0265 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4714   -0.2243    0.0038 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0414   -2.2523    0.0302 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  6  1  1  0\n  1  7  1  0\n  2  8  1  0\n  3  9  1  0\n  4 10  1  0\n  5 11  1  0\n  6 12  1  0\nM  END\n$$$$\n"
+      },
+      {
+        "smiles": "Cc1ccccc1",
+        "score": 0.85,
+        "rank": 2,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccc(F)cc1",
+        "score": 0.76,
+        "rank": 3,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1cccnc1",
+        "score": 0.67,
+        "rank": 4,
+        "valid": true,
+        "conformer_sdf": null
+      },
+      {
+        "smiles": "c1ccoc1",
+        "score": 0.58,
+        "rank": 5,
+        "valid": true,
+        "conformer_sdf": null
+      }
+    ]
+  }
+}

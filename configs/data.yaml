@@ -1,0 +1,16 @@
+nmr_bins: 1024
+nmr_axis_min: -2.0
+nmr_axis_max: 14.0
+
+ms_bins: 2048
+ms_axis_min: 0.0
+ms_axis_max: 2000.0
+ms_log_transform: true
+
+ir_bins: 2048
+ir_axis_min: 400.0
+ir_axis_max: 4000.0
+
+fingerprint_bits: 2048
+morgan_radius: 2
+random_seed: 42

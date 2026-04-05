@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "diamondhacks"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.2",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "selfies>=2.1",
+    "pyyaml",
+    "omegaconf",
+    "tqdm",
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+    "requests",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "wandb"]
